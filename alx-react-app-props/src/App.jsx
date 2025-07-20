@@ -1,12 +1,7 @@
 import ProfilePage from './ProfilePage';
-import { UserProvider } from './UserContext';
 
 function App() {
-  return (
-    <UserProvider>
-      <ProfilePage />
-    </UserProvider>
-  );
+  return <ProfilePage />;
 }
 
 export default App;
