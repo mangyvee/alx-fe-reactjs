@@ -1,25 +1,29 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const navbarStyle = {
-    backgroundColor: '#333',         // ✅ includes backgroundColor
-    color: 'white',
-    padding: '1rem',
-    display: 'flex',
-    justifyContent: 'space-between', // ✅ includes justifyContent
-    alignItems: 'center'
-  };
-
+function Navbar() {
   return (
-    <nav style={navbarStyle}>
-      <div className="logo">TechNova Ltd.</div>
-      <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', margin: 0 }}>
-        <li><a href="#about" style={{ color: 'white' }}>About</a></li>
-        <li><a href="#services" style={{ color: 'white' }}>Services</a></li>
-        <li><a href="#contact" style={{ color: 'white' }}>Contact</a></li>
-      </ul>
+    <nav
+      style={{
+        backgroundColor: '#333',
+        padding: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <Link to="/" style={{ color: 'white', margin: '0 15px', textDecoration: 'none' }}>
+        Home
+      </Link>
+      <Link to="/about" style={{ color: 'white', margin: '0 15px', textDecoration: 'none' }}>
+        About
+      </Link>
+      <Link to="/services" style={{ color: 'white', margin: '0 15px', textDecoration: 'none' }}>
+        Services
+      </Link>
+      <Link to="/contact" style={{ color: 'white', margin: '0 15px', textDecoration: 'none' }}>
+        Contact
+      </Link>
     </nav>
   );
-};
+}
 
 export default Navbar;
