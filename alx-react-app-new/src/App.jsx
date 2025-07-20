@@ -8,7 +8,7 @@ import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
-
+import Counter from './components/Counter'; // ✅ Add this line
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +28,7 @@ function App() {
       <Header />
       <MainContent />
       <UserProfile name="Alice" age={25} bio="Loves hiking and photography" />
+      <Counter /> {/* ✅ Add this to render the new Counter component */}
       <Footer />
 
       <h1>Vite + React</h1>
