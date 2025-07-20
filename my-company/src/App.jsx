@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar';
 import Compome from './components/Compome';
 import About from './components/About';
 import Services from './components/Services';
@@ -17,10 +18,19 @@ function App() {
 
   return (
     <div>
-      <Compome companyName={companyInfo.name} tagline={companyInfo.tagline} />
-      <About description={companyInfo.description} />
-      <Services services={companyInfo.services} />
-      <Contact email={companyInfo.contact.email} phone={companyInfo.contact.phone} />
+      <Navbar />
+      <div id="home">
+        <Compome companyName={companyInfo.name} tagline={companyInfo.tagline} />
+      </div>
+      <div id="about">
+        <About description={companyInfo.description} />
+      </div>
+      <div id="services">
+        <Services services={companyInfo.services} />
+      </div>
+      <div id="contact">
+        <Contact email={companyInfo.contact.email} phone={companyInfo.contact.phone} />
+      </div>
     </div>
   );
 }
