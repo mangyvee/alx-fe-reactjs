@@ -1,5 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Compome from './components/Compome';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
@@ -17,21 +17,15 @@ function App() {
   };
 
   return (
-    <div>
+    <Router>
       <Navbar />
-      <div id="home">
-        <Compome companyName={companyInfo.name} tagline={companyInfo.tagline} />
-      </div>
-      <div id="about">
-        <About description={companyInfo.description} />
-      </div>
-      <div id="services">
-        <Services services={companyInfo.services} />
-      </div>
-      <div id="contact">
-        <Contact email={companyInfo.contact.email} phone={companyInfo.contact.phone} />
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Compome companyName={companyInfo.name} tagline={companyInfo.tagline} />} />
+        <Route path="/about" element={<About description={companyInfo.description} />} />
+        <Route path="/services" element={<Services services={companyInfo.services} />} />
+        <Route path="/contact" element={<Contact email={companyInfo.contact.email} phone={companyInfo.contact.phone} />} />
+      </Routes>
+    </Router>
   );
 }
 
