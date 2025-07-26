@@ -50,7 +50,7 @@ export const useRecipeStore = create((set) => ({
       ),
     })),
 
-  // ✅ New Favorites functionality
+  // ✅ Favorites feature
   addFavorite: (recipeId) =>
     set((state) => ({
       favorites: state.favorites.includes(recipeId)
@@ -63,7 +63,7 @@ export const useRecipeStore = create((set) => ({
       favorites: state.favorites.filter((id) => id !== recipeId),
     })),
 
-  // ✅ Generate Recommendations (Mock logic)
+  // ✅ Recommendations feature (mock logic)
   generateRecommendations: () =>
     set((state) => {
       const recommended = state.recipes.filter(
