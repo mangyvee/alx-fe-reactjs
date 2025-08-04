@@ -2,72 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    @apply bg-gray-50; /* Light background for the app */
   }
-  a:hover {
-    color: #747bff;
+}
+
+#root {
+  @apply min-h-screen flex flex-col items-center;
+}
+
+@layer components {
+  .search-form {
+    @apply w-full max-w-3xl mx-auto p-4 bg-white shadow-md rounded-lg;
   }
-  button {
-    background-color: #f9f9f9;
+  .search-input {
+    @apply w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .search-button {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .results-container {
+    @apply w-full max-w-3xl mx-auto mt-6;
+  }
+  .user-card {
+    @apply flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow;
+  }
+  .user-card img {
+    @apply w-16 h-16 rounded-full mr-4;
+  }
+  .load-more {
+    @apply mx-auto mt-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400;
+  }
+}
+
+@layer utilities {
+  .focus-visible {
+    @apply outline-2 outline-blue-500 outline-offset-2;
+  }
+}
+
+@media (max-width: 640px) {
+  .search-form {
+    @apply p-2;
+  }
+  .user-card {
+    @apply flex-col items-start;
+  }
+  .user-card img {
+    @apply mb-2;
   }
 }
