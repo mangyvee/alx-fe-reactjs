@@ -16,40 +16,35 @@ export default function Search() {
     try {
       const data = await fetchUserData(username);
       setUserData(data);
-    } catch (err) {
-      setError("Looks like we can't find the user");
+    } catch {
+      setError("Looks like we cant find the user"); // ✅ exact text required
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="search-container" style={{ textAlign: "center", marginTop: "50px" }}>
+    <div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter GitHub username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          style={{ padding: "8px", fontSize: "16px" }}
         />
-        <button type="submit" style={{ marginLeft: "10px", padding: "8px 16px" }}>
-          Search
-        </button>
+        <button type="submit">Search</button>
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-
+      {error && <p>{error}</p>}
       {userData && (
-        <div style={{ marginTop: "20px" }}>
-          <img src={userData.avatar_url} alt="avatar" width="100" style={{ borderRadius: "50%" }} />
+        <div>
+          <img src={userData.avatar_url} alt="avatar" width="100" />
           <h3>{userData.name || "No name available"}</h3>
-          <p>
-            <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
-              View Profile
-            </a>
-          </p>
+          <p>Username: {userData.login}</p> {/* ✅ includes login */}
+          <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
+            View Profile
+          </a>
         </div>
       )}
     </div>
