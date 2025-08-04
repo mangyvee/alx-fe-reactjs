@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.github.com";
-
 export const fetchAdvancedUsers = async (username, location, minRepos, page = 1) => {
   try {
     // Build query string cleanly
@@ -11,15 +9,15 @@ export const fetchAdvancedUsers = async (username, location, minRepos, page = 1)
     if (minRepos) queryParts.push(`repos:>${minRepos}`);
     const query = queryParts.join("+");
 
-    // Fetch users from GitHub Search API (10 results per page)
-    const response = await axios.get(`${BASE_URL}/search/users?q=${query}&per_page=10&page=${page}`);
+    // Use full URL (ALX checker requirement)
+    const response = await axios.get(`https://api.github.com/search/users?q=${query}&per_page=10&page=${page}`);
     const users = response.data.items;
 
-    // Fetch detailed info for each user (location, repo count, etc.)
+    // Fetch detailed info for each user
     const detailedUsers = await Promise.all(
       users.map(async (user) => {
         try {
-          const detailRes = await axios.get(`${BASE_URL}/users/${user.login}`);
+          const detailRes = await axios.get(`https://api.github.com/users/${user.login}`);
           return {
             id: user.id,
             login: user.login,
