@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { fetchAdvancedUsers } from "../services/githubService";
+import { fetchUserData } from "../services/githubService";
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -19,7 +19,7 @@ const Search = () => {
     setPage(1);
 
     try {
-      const results = await fetchAdvancedUsers(username, location, minRepos, 1);
+      const results = await fetchUserData(username, location, minRepos, 1);
       if (results.length === 0) {
         setError("No users found with the given criteria.");
         setHasMore(false);
@@ -38,7 +38,7 @@ const Search = () => {
     setLoading(true);
     try {
       const nextPage = page + 1;
-      const results = await fetchAdvancedUsers(username, location, minRepos, nextPage);
+      const results = await fetchUserData(username, location, minRepos, nextPage);
       setUsers((prev) => [...prev, ...results]);
       setPage(nextPage);
       setHasMore(results.length === 10); // Only allow "Load More" if we got a full page

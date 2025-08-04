@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetchAdvancedUsers = async (username, location, minRepos, page = 1) => {
+export const fetchUserData = async (username, location, minRepos, page = 1) => {
   try {
     // Build query string cleanly
     let queryParts = [];
