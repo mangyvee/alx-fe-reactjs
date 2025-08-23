@@ -3,48 +3,174 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1604908177520-0e1b3e3f12f5?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1604908177520-0e1b3e3f12f5?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon",
+      "2 large eggs",
+      "50g grated Parmesan cheese",
+      "2 cloves garlic",
+      "Salt and black pepper"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente.",
+      "Fry pancetta/bacon with garlic until crispy.",
+      "Beat eggs with Parmesan, salt, and pepper.",
+      "Drain pasta and mix quickly with egg mixture and pancetta.",
+      "Serve immediately with extra Parmesan."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1604908177471-8b2a1e4d89c1?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1604908177471-8b2a1e4d89c1?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup yogurt",
+      "2 tbsp tikka masala spice mix",
+      "1 onion, chopped",
+      "2 cloves garlic",
+      "1 cup tomato puree",
+      "100ml cream",
+      "Salt and oil"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and tikka masala spice for 1 hour.",
+      "Grill or fry chicken until cooked.",
+      "Sauté onion and garlic in oil until golden.",
+      "Add tomato puree and simmer 10 minutes.",
+      "Add cooked chicken and cream, cook 5 more minutes.",
+      "Serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Vegetable Stir Fry",
     "summary": "A quick and healthy stir-fried mix of vegetables with soy sauce and sesame oil.",
-    "image": "https://images.unsplash.com/photo-1604908177383-3a0d72c5d2b7?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1604908177383-3a0d72c5d2b7?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "1 bell pepper, sliced",
+      "1 carrot, sliced",
+      "100g broccoli florets",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "2 cloves garlic",
+      "1 tsp ginger, grated"
+    ],
+    "instructions": [
+      "Heat sesame oil in a wok.",
+      "Add garlic and ginger, sauté 1 minute.",
+      "Add vegetables and stir fry for 5–7 minutes.",
+      "Add soy sauce and cook 2 more minutes.",
+      "Serve hot with rice or noodles."
+    ]
   },
   {
     "id": 4,
     "title": "Classic Burger",
     "summary": "Juicy beef patty with fresh lettuce, tomato, and melted cheese on a toasted bun.",
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "500g ground beef",
+      "4 burger buns",
+      "4 slices cheddar cheese",
+      "Lettuce leaves",
+      "Tomato slices",
+      "Salt, pepper, and oil"
+    ],
+    "instructions": [
+      "Form beef into 4 patties, season with salt and pepper.",
+      "Grill or fry patties until cooked to preference.",
+      "Toast buns lightly.",
+      "Assemble burger with lettuce, tomato, patty, and cheese.",
+      "Serve with fries or salad."
+    ]
   },
   {
     "id": 5,
     "title": "Margherita Pizza",
     "summary": "Traditional Italian pizza topped with fresh mozzarella, basil, and tomato sauce.",
-    "image": "https://images.unsplash.com/photo-1601924582973-ec82d6b1b2b8?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1601924582973-ec82d6b1b2b8?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "1 pizza dough base",
+      "100ml tomato sauce",
+      "150g fresh mozzarella",
+      "Fresh basil leaves",
+      "Olive oil",
+      "Salt"
+    ],
+    "instructions": [
+      "Preheat oven to 220°C.",
+      "Spread tomato sauce on the dough.",
+      "Top with mozzarella and basil leaves.",
+      "Drizzle olive oil and sprinkle salt.",
+      "Bake for 12–15 minutes until crust is golden.",
+      "Serve hot."
+    ]
   },
   {
     "id": 6,
     "title": "Sushi Platter",
     "summary": "A selection of fresh sushi rolls with salmon, tuna, and avocado.",
-    "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb30?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb30?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "2 cups sushi rice",
+      "Nori sheets",
+      "100g salmon",
+      "100g tuna",
+      "1 avocado, sliced",
+      "Soy sauce and wasabi"
+    ],
+    "instructions": [
+      "Cook sushi rice and season with rice vinegar.",
+      "Place nori on bamboo mat, spread rice evenly.",
+      "Add fillings (salmon, tuna, avocado).",
+      "Roll tightly and slice.",
+      "Serve with soy sauce and wasabi."
+    ]
   },
   {
     "id": 7,
     "title": "Chocolate Cake",
     "summary": "Rich and moist chocolate cake topped with creamy chocolate ganache.",
-    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "200g flour",
+      "200g sugar",
+      "100g cocoa powder",
+      "3 eggs",
+      "100ml milk",
+      "100g butter",
+      "Chocolate ganache"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mix flour, sugar, cocoa, eggs, milk, and butter until smooth.",
+      "Pour into a greased baking pan.",
+      "Bake for 25–30 minutes.",
+      "Cool and top with chocolate ganache.",
+      "Serve slices."
+    ]
   },
   {
     "id": 8,
     "title": "Caesar Salad",
     "summary": "Crisp romaine lettuce with creamy Caesar dressing, croutons, and parmesan cheese.",
-    "image": "https://images.unsplash.com/photo-1562967916-60ffdf4b7a0e?auto=format&fit=crop&w=400&q=80"
+    "image": "https://images.unsplash.com/photo-1562967916-60ffdf4b7a0e?auto=format&fit=crop&w=400&q=80",
+    "ingredients": [
+      "1 romaine lettuce",
+      "50g parmesan cheese",
+      "Croutons",
+      "2 tbsp Caesar dressing",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Wash and chop lettuce.",
+      "Toss lettuce with Caesar dressing.",
+      "Add croutons and sprinkle parmesan.",
+      "Season with salt and pepper.",
+      "Serve immediately."
+    ]
   }
 ]
