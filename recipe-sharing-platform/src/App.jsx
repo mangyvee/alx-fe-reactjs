@@ -1,31 +1,35 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import RecipeDetail from "./components/RecipeDetail";
+import AddRecipeForm from "./components/AddRecipeForm";
 
 function App() {
   return (
     <Router>
-      {/* Keep your existing gradient, header, and subheading */}
-      <div className="min-h-screen bg-gradient-to-br from-orange-100 via-white to-green-100 flex flex-col items-center p-8">
-        <h1 className="text-5xl font-extrabold text-green-700 drop-shadow-md mb-4">
-          🍲 Recipe Sharing Platform
-        </h1>
-        <p className="text-lg text-gray-700 max-w-2xl text-center mb-10">
-          Discover, share, and enjoy recipes from around the world.  
-          This is just the beginning — soon, you’ll be able to browse and upload your own recipes!
-        </p>
+      <div className="container mx-auto p-4">
+        {/* Navigation */}
+        <nav className="flex justify-between items-center mb-6">
+          <Link
+            to="/"
+            className="text-2xl font-bold text-blue-600 hover:text-blue-800"
+          >
+            Recipe Sharing Platform
+          </Link>
+          <Link
+            to="/add-recipe"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            Add Recipe
+          </Link>
+        </nav>
 
-        {/* Routes for HomePage and RecipeDetail */}
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
+          <Route path="/add-recipe" element={<AddRecipeForm />} />
         </Routes>
-
-        {/* Example button */}
-        <button className="mt-10 px-8 py-3 bg-orange-500 text-white rounded-full shadow-md hover:bg-orange-600 transition">
-          + Add New Recipe
-        </button>
       </div>
     </Router>
   );
