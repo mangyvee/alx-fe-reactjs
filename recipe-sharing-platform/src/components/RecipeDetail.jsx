@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import data from "../data.json";
 
 const RecipeDetail = () => {
   const { id } = useParams(); // Get recipe ID from URL
-  const recipe = data.find((r) => r.id === parseInt(id));
+  const [recipe, setRecipe] = useState(null);
+
+  // Load the recipe when component mounts or id changes
+  useEffect(() => {
+    const foundRecipe = data.find((r) => r.id === parseInt(id));
+    setRecipe(foundRecipe);
+  }, [id]);
 
   if (!recipe) {
     return <p className="text-center mt-10 text-red-600">Recipe not found</p>;
