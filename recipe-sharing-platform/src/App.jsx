@@ -1,4 +1,5 @@
 import React from "react";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
@@ -14,26 +15,11 @@ function App() {
         This is just the beginning — soon, you’ll be able to browse and upload your own recipes!
       </p>
 
-      {/* Sample Recipe Card */}
-      <div className="bg-white rounded-2xl shadow-lg w-full max-w-md p-6 mb-10">
-        <img
-          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
-          alt="Delicious pasta"
-          className="rounded-xl mb-4"
-        />
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Creamy Alfredo Pasta
-        </h2>
-        <p className="text-gray-600 mb-4">
-          A rich and creamy pasta dish made with fresh cream, parmesan, and garlic.
-        </p>
-        <button className="px-5 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
-          View Recipe
-        </button>
-      </div>
+      {/* Home Page Recipe Cards */}
+      <HomePage />  {/* <-- Insert HomePage component here */}
 
       {/* Example button */}
-      <button className="px-8 py-3 bg-orange-500 text-white rounded-full shadow-md hover:bg-orange-600 transition">
+      <button className="mt-10 px-8 py-3 bg-orange-500 text-white rounded-full shadow-md hover:bg-orange-600 transition">
         + Add New Recipe
       </button>
     </div>
