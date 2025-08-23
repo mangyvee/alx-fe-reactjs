@@ -1,8 +1,8 @@
-import FormikForm from './components/FormikForm';
+import FormikForm from './components/formikForm';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>User Registration with Formik</h1>
       <FormikForm />
     </div>
