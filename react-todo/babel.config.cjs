@@ -1,6 +1,8 @@
 module.exports = {
   presets: [
-    "@babel/preset-env",
-    ["@babel/preset-react", { runtime: "automatic" }],
+    // Transpile modern JS for Jest
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    // Enable JSX + the new JSX transform
+    ['@babel/preset-react', { runtime: 'automatic' }],
   ],
 };
